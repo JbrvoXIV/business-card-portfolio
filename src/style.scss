@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+$color-darkcyanblue: #1a1b21;
+$color-rosybrown: #bd967b;
+$color-lightblack: #161619;
+$color-lightgray: #918e9b;
+
+@mixin textSize($fontsize) {
+    font-size: $fontsize;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    background-color: rgb(20, 20, 20);
+}
+
+.container {
+    margin: 20px;
+    font-family: 'Dongle', sans-serif;
+    background-color: $color-darkcyanblue;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px black;
+    color: white;
+    font-weight: 300;
+}
+
+.dev-logo {
+    min-width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.info-container {
+    text-align: center;
+    line-height: 0.7;
+    letter-spacing: 1.3px;
+    @include textSize(1.15rem);
+
+    h1 {
+        margin-block-end: 10px;
+        margin-block-start: 10px;
+    }
+
+    h2 {
+        color: $color-rosybrown;
+        @extend h1;
+    }
+
+    h3 {
+        @extend h1;
+    }
+
+    .email-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 80%;
+        margin: 0 auto;
+        height: 25px;
+        border-radius: 3px;
+
+        i {
+            color: black;
+            padding: 0 3px 2px 0;            
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            @include textSize(1.7rem);
+            letter-spacing: 0.1px;
+            font-weight: 400;
+        }
+    }
+}
+
+.about-container {
+    margin: 20px 30px;
+    line-height: 0.85;
+
+    h2 {
+        margin-block-end: 0;
+        @include textSize(2rem);
+
+        i {
+            @include textSize(1rem);
+        }
+    }
+    
+    p {
+        @include textSize(1.35rem);
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+}
+
+.interests-container {
+    @extend .about-container;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    background-color: $color-lightblack;
+
+    i {
+        @include textSize(2.5rem);
+        padding: 10px;
+        color: $color-lightgray;
+    }
+}
