@@ -3,7 +3,7 @@ import React from "react"
 const About = () => {
     return (
         <div className="about-container">
-            <h2><i class="fas fa-hashtag fa-xs"></i>About</h2>
+            <h2><i className="fas fa-hashtag fa-xs"></i>About</h2>
             <p>
             I am a current Computer Science student at Florida International University. 
             I graduated with an Associates in December of 2021 with a Bachelors expected for December of 2023. 

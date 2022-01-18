@@ -9,7 +9,7 @@ const Info = () => {
             <h2>Front End Developer</h2>
             <h3>github.com/JbrvoXIV</h3>
             <div className="email-button">
-                <i class="fas fa-envelope"></i>
+                <i className="fas fa-envelope"></i>
                 <a href="mailto: jbravo0423@gmail.com">Email</a>
             </div>
         </div>

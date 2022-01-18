@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
-
-$color-darkcyanblue: #1a1b21;
-$color-rosybrown: #bd967b;
-$color-lightblack: #161619;
-$color-lightgray: #918e9b;
-
-@mixin textSize($fontsize) {
-    font-size: $fontsize;
-}
+@import './_partials/mixins', './_partials/variables', './_partials/functions';
 
 * {
     box-sizing: border-box;
@@ -25,7 +17,7 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 0 5px 5px black;
     color: white;
-    font-weight: 300;
+    font-weight: $font-weight('regular');
 }
 
 .dev-logo {
@@ -58,6 +50,7 @@ html, body {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         background-color: white;
         width: 80%;
         margin: 0 auto;
@@ -70,11 +63,18 @@ html, body {
         }
 
         a {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
             text-decoration: none;
             color: black;
             @include textSize(1.7rem);
             letter-spacing: 0.1px;
-            font-weight: 400;
+            font-weight: $font-weight('medium');
         }
     }
 }
