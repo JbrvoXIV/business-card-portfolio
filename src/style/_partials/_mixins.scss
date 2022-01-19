@@ -1,0 +1,43 @@
+@mixin containerStyle {
+    max-width: 450px;
+    margin: 20px;
+    font-family: 'Dongle', sans-serif;
+    background-color: $color-darkcyanblue;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px black;
+    color: white;
+    font-weight: 300;
+}
+
+@mixin infoContainerStyle {
+    text-align: center;
+    line-height: 0.7;
+    letter-spacing: 1.3px;
+    font-size: 1.15rem;
+}
+
+@mixin emailButton {
+    display: block;
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+    height: 25px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+@mixin centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin marginBlockReset($block-start: '0', $block-end: '0') {
+    margin-block-start: unquote($block-start);
+    margin-block-end: unquote($block-end);
+}
+
+@mixin paddingBlockReset($block-start: '0', $block-end: '0') {
+    padding-block-start: unquote($block-start);
+    padding-block-end: unquote($block-end);
+}

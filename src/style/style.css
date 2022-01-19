@@ -4,12 +4,26 @@
           box-sizing: border-box;
 }
 
-html, body {
+html, body, #root {
+  height: 100%;
   margin: 0;
   background-color: #141414;
 }
 
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .container {
+  max-width: 450px;
   margin: 20px;
   font-family: 'Dongle', sans-serif;
   background-color: #1a1b21;
@@ -34,10 +48,10 @@ html, body {
 }
 
 .info-container h1, .info-container h2, .info-container h3 {
-  -webkit-margin-after: 10px;
-          margin-block-end: 10px;
   -webkit-margin-before: 10px;
           margin-block-start: 10px;
+  -webkit-margin-after: 10px;
+          margin-block-end: 10px;
 }
 
 .info-container h2 {
@@ -45,6 +59,17 @@ html, body {
 }
 
 .info-container .email-button {
+  display: block;
+  width: 80%;
+  background-color: white;
+  margin: 0 auto;
+  height: 25px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.info-container .email-button div {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,24 +79,20 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
-  width: 80%;
-  margin: 0 auto;
-  height: 25px;
-  border-radius: 3px;
+  color: black;
 }
 
 .info-container .email-button i {
-  color: black;
-  padding: 0 3px 2px 0;
+  padding-bottom: 3px;
 }
 
-.info-container .email-button a {
+.info-container .email-button p {
   text-decoration: none;
-  color: black;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
   font-size: 1.7rem;
-  letter-spacing: 0.1px;
-  font-weight: 400;
 }
 
 .about-container, .interests-container {
@@ -80,6 +101,8 @@ html, body {
 }
 
 .about-container h2, .interests-container h2 {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
   font-size: 2rem;
@@ -97,6 +120,16 @@ html, body {
           margin-block-end: 0;
 }
 
+.interests-container ul {
+  -webkit-margin-before: 10px;
+          margin-block-start: 10px;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
+  font-size: 1.35rem;
+}
+
 .footer-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,7 +137,11 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #161619;
+  border-radius: 0 0 10px 10px;
 }
 
 .footer-container i {

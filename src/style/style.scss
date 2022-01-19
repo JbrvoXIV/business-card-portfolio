@@ -3,21 +3,21 @@
 
 * {
     box-sizing: border-box;
+    overflow: scroll;
 }
 
-html, body {
+html, body, #root {
+    height: 100%;
     margin: 0;
     background-color: rgb(20, 20, 20);
 }
 
+#root {
+    @include centerDiv;
+}
+
 .container {
-    margin: 20px;
-    font-family: 'Dongle', sans-serif;
-    background-color: $color-darkcyanblue;
-    border-radius: 10px;
-    box-shadow: 0 0 5px 5px black;
-    color: white;
-    font-weight: $font-weight('regular');
+    @include containerStyle;
 }
 
 .dev-logo {
@@ -27,14 +27,10 @@ html, body {
 }
 
 .info-container {
-    text-align: center;
-    line-height: 0.7;
-    letter-spacing: 1.3px;
-    @include textSize(1.15rem);
+    @include infoContainerStyle;
 
     h1 {
-        margin-block-end: 10px;
-        margin-block-start: 10px;
+        @include marginBlockReset(10px, 10px);
     }
 
     h2 {
@@ -47,34 +43,22 @@ html, body {
     }
 
     .email-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        background-color: white;
-        width: 80%;
-        margin: 0 auto;
-        height: 25px;
-        border-radius: 3px;
+        @include emailButton;
 
-        i {
-            color: black;
-            padding: 0 3px 2px 0;            
-        }
-
-        a {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+        div {
             height: 100%;
-            z-index: 1;
-            text-decoration: none;
+            @include centerDiv;
             color: black;
-            @include textSize(1.7rem);
-            letter-spacing: 0.1px;
-            font-weight: $font-weight('medium');
+        }
+        
+        i {
+            padding-bottom: 3px;
+        }
+        
+        p {
+            text-decoration: none;
+            @include marginBlockReset;
+            font-size: 1.7rem;
         }
     }
 }
@@ -84,16 +68,16 @@ html, body {
     line-height: 0.85;
 
     h2 {
-        margin-block-end: 0;
-        @include textSize(2rem);
+        @include marginBlockReset;
+        font-size: 2rem;
 
         i {
-            @include textSize(1rem);
+            font-size: 1rem;
         }
     }
     
     p {
-        @include textSize(1.35rem);
+        font-size: 1.35rem;
         margin-block-start: 0;
         margin-block-end: 0;
     }
@@ -101,15 +85,21 @@ html, body {
 
 .interests-container {
     @extend .about-container;
+
+    ul {
+        @include marginBlockReset(10px, 0);
+        padding-inline-start: 20px;
+        font-size: 1.35rem;
+    }
 }
 
 .footer-container {
-    display: flex;
-    justify-content: center;
+    @include centerDiv;
     background-color: $color-lightblack;
+    border-radius: 0 0 10px 10px;
 
     i {
-        @include textSize(2.5rem);
+        font-size: 2.5rem;
         padding: 10px;
         color: $color-lightgray;
     }

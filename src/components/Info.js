@@ -8,10 +8,12 @@ const Info = () => {
             <h1>Jordan Bravo</h1>
             <h2>Front End Developer</h2>
             <h3>github.com/JbrvoXIV</h3>
-            <div className="email-button">
-                <i className="fas fa-envelope"></i>
-                <a href="mailto: jbravo0423@gmail.com">Email</a>
-            </div>
+            <a href="mailto: jbravo0423@gmail.com" className="email-button" target="_blank" rel="noreferrer">
+                <div>
+                    <i className="fas fa-envelope"></i>
+                    <p>Email</p>
+                </div>
+            </a>
         </div>
     )
 }

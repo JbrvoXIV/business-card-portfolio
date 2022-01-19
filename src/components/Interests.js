@@ -4,13 +4,12 @@ const Interests = () => {
     return (
         <div className="interests-container">
             <h2><i className="fas fa-hashtag fa-xs"></i>Interests</h2>
-            <p>
-            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-            </p>
+            <ul>
+                <li>Programming on my free time</li>
+                <li>Physical Exercise</li>
+                <li>Video Games</li>
+                <li>Spending time with family</li>
+            </ul>
         </div>
     )
 }
